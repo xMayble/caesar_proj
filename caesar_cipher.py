@@ -12,5 +12,5 @@ def encrypt(text, shift):
         index_Of_text = alphabet.index(text[i])
         encrypted_word += alphabet[index_Of_text + shift]
     print(encrypted_word)
-encrypt("hello", 2)
+encrypt(text, shift)
 
