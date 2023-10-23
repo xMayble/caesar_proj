@@ -10,7 +10,11 @@ def encrypt(text, shift):
     encrypted_word = ''
     for i in range(len(text)):
         index_Of_text = alphabet.index(text[i])
-        encrypted_word += alphabet[index_Of_text + shift]
-    print(encrypted_word)
+        new_index = index_Of_text + shift
+        if new_index > 25:
+            encrypted_word += alphabet[(new_index % 25)-1]
+        else: 
+            encrypted_word += alphabet[new_index]
+    print(f"The encrypted text is: {encrypted_word}")
 encrypt(text, shift)
 
