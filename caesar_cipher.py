@@ -16,5 +16,18 @@ def encrypt(text, shift):
         else: 
             encrypted_word += alphabet[new_index]
     print(f"The encrypted text is: {encrypted_word}")
-encrypt(text, shift)
+
+# create a func called 'decrypt' that takes 'text' & 'shift' as parameters
+def decrypt(text, shift):
+    decrypted_word = ''
+    for letter in text:
+        idx = alphabet.index(letter)
+        new_index = idx - shift
+        decrypted_word += alphabet[new_index]
+    print(f"The decrypted text is: {decrypted_word}")
+
+if direction == 'encode':
+    encrypt(text, shift)
+else:
+    decrypt(text, shift)
 
